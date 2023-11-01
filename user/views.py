@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from user.forms import UserLoginForm
+from  user.models import Users
 
 
 def email_verification(request):
@@ -6,7 +8,8 @@ def email_verification(request):
 
 
 def login(request):
-    return render(request, 'user/login.html')
+    context = {'form': UserLoginForm()}
+    return render(request, 'user/login.html', context)
 
 
 def profile(request):
