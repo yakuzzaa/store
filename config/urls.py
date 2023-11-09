@@ -21,11 +21,11 @@ from django.conf import settings
 
 import products.views
 import user.views
-from products.views import index
+from products.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path('', IndexView.as_view(), name='index'),
     path('products/', include('products.api.urls', namespace='products')),
     path('user/', include('user.api.urls', namespace='user')),
 ]
