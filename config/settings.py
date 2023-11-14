@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-jyqbpn+0uvf_9%dfhv99w5cqe3(*tei(u36c8e!_og4uyzgobk
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+DOMAIN_NAME = 'http://localhost:8000'
 
 # Application definition
 
@@ -62,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'products.context_processors.basket',
             ],
         },
     },
@@ -127,3 +129,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'user.Users'
 LOGIN_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+# email settings
+
+EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'DeadInsideStore@yandex.ru'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_SSL = True

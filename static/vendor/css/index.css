@@ -1,10 +1,11 @@
 body {
-    background: url("../img/wallpaper.jpg") no-repeat center top fixed;
+    background: url("../img/black-The-Walking-Dead-TV-light-lighting-darkness-computer-wallpaper-189384.jpg") no-repeat center top fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     padding-top: 56px;
+    color: white;
 }
 
 #start-purchase-btn {
@@ -16,4 +17,8 @@ body {
 #start-purchase-link {
     text-decoration: none;
     color: white;
+}
+.head{
+    color: darkred;
+    font-family: 'Permanent Marker', cursive;
 }
