@@ -11,13 +11,13 @@ from django.urls import reverse_lazy, reverse
 from common.views import TitleMixin
 
 
-class UserLoginView(TitleMixin,SuccessMessageMixin, LoginView):
+class UserLoginView(TitleMixin, SuccessMessageMixin, LoginView):
     model = Users
     template_name = 'user/login.html'
-    title = "DeadStore|Авторизация"
     form_class = UserLoginForm
     success_url = reverse_lazy('index')
     success_message = 'Авторизация прошла успешно!'
+    title = 'DeadStore|Авторизация'
 
 
 class UserRegistrationView(TitleMixin, SuccessMessageMixin, CreateView):
